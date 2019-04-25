@@ -6,26 +6,25 @@
     <div class="header-input">
       <span class="iconfont">&#xe632;输入城市/景点/游玩主题</span>
     </div>
-    <div class="header-right">
-      <span>{{this.city}}</span>
-      <span class="iconfont arrow-down">&#xe634;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        <span>{{this.$store.state.city}}</span>
+        <span class="iconfont arrow-down">&#xe634;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeHeader',
-  props: {
-    city: {
-      type: String
-    }
-  }
+  name: 'HomeHeader'
 }
 </script>
 
 <style lang="stylus" scoped>
   @import "~style/variables.styl"
+  a
+    text-decoration: none
   .header
     height: 86px
     line-height: 86px
@@ -54,6 +53,7 @@ export default {
       span
         display: inline-block
         vertical-align :top
+        color #fff
       .arrow-down
         font-size : 40px
 </style>
