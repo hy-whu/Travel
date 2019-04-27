@@ -12,7 +12,9 @@ try {
 }
 export default new Vuex.Store({
   state: {
-    city: defaultCity
+    city: defaultCity,
+    showGallary: false,
+    showReturn: false
   },
   actions: {
     changeCity (ctx, city) {
